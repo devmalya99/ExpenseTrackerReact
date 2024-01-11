@@ -1,15 +1,15 @@
+import "./ExpenseItem.css";
 
-
-function ExpenseItem()
-{
-    return (
-        <div>
-            <h2>Expense Items</h2>
-            <h3>Food Rs 10</h3>
-            <h3>Petrol Rs 100</h3>
-            <h3>Movies rs 200</h3>
-        </div>
-    )
+function ExpenseItem() {
+  return (
+    <div className="expense-item">
+      <div>March 28th 2023</div>
+      <div className="expense-item_description">
+        <h3>Food</h3>
+        <div className="expense-item_price">100</div>
+      </div>
+    </div>
+  );
 }
 
 export default ExpenseItem;
