@@ -1,7 +1,7 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 
-function App() {
+const App=()=> {
 
   const expenses = [
     {
