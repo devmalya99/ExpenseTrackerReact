@@ -3,25 +3,27 @@ import Card from "../UI/Card";
 import ExpenseDate from "./ExpenseDate";
 import { useState } from "react";
 
-
-const ExpenseItem=(props) =>
-{
+const ExpenseItem=(props) => {
   const [title,setTitle]=useState(props.title);
-  const clickHandler=()=>
-  {
+  const [amount, setAmount] = useState(props.amount);
+
+  const clickTitleHandler = () => {
     setTitle('Updated');
+  }
+
+  const clickAmountHandler = () => {
+    setAmount(100);
   }
 
  return (
     <Card className="expense-item">
-
-  <ExpenseDate date={props.date} />
-      <div className="expense-item_description">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
         <h3>{title}</h3>
-        <div className="expense-item_price">${props.amount}</div>
-      {/* <div className="expense-item_location">{LocationOfExpenditure}</div> */}
+        <div className="expense-item__price">${amount}</div>
       </div>
-      <button onClick={clickHandler} >change item</button>
+      <button onClick={clickTitleHandler} aria-label={`Change title of ${props.title} expense`}>Change Title</button>
+      <button onClick={clickAmountHandler} aria-label={`Change amount of ${props.title} expense to $100`}>Change to $100</button>
     </Card>
   );
 }
