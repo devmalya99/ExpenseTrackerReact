@@ -10,6 +10,23 @@ html {
 
 body {
   margin: 0;
-  background-color: #1dc24f;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #FAFAFA;
 }
 
+.App {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.expense-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
