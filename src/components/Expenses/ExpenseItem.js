@@ -5,7 +5,10 @@ import ExpenseDate from "./ExpenseDate";
 
 const ExpenseItem=(props) =>
 {
-
+  const deleteExp=()=>
+  {
+        
+  }
 
  return (
     <Card className="expense-item">
@@ -16,6 +19,7 @@ const ExpenseItem=(props) =>
         <div className="expense-item_price">${props.amount}</div>
       {/* <div className="expense-item_location">{LocationOfExpenditure}</div> */}
       </div>
+      <button onClick={deleteExp} className="delButton">Delete Expense</button>
     </Card>
   );
 }
