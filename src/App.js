@@ -1,6 +1,6 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import "./index.css";
-
+import Form from "./components/ExpenseForm ";
 const App=()=> {
 
   const expenses = [
@@ -24,11 +24,12 @@ const App=()=> {
       date: new Date(2021, 5, 12),
     },
   ];
-  
+
   return (
     <div className="App">
       <h2>Let's get started!</h2>
       <div className="expense-items-container">
+        <Form/>
         {expenses.map((expense, index) => 
           <ExpenseItem 
             key={index}
