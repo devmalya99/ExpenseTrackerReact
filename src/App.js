@@ -1,6 +1,8 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import "./index.css";
 import Form from "./components/ExpenseForm ";
+import Expenses from "../src/components/NewExpense/NewExpense";
+import NewExpense from "../src/components/NewExpense/NewExpense";
 const App=()=> {
 
   const expenses = [
@@ -28,6 +30,7 @@ const App=()=> {
   return (
     <div className="App">
       <h2>Let's get started!</h2>
+      <NewExpense />
       <div className="expense-items-container">
         <Form/>
         {expenses.map((expense, index) => 

@@ -9,31 +9,20 @@ const ExpenseForm  = () => {
         <input type='text' id='title' placeholder='Please add Expense Title'/>
         
         <label for='amount'>Amount</label>
-        <input type='number' id='amount' placeholder='Expense Amount'/>
+        <input type='number' id='amount' min="0.01" step="0.01" placeholder='Expense Amount'/>
         
         <label for='date'></label>
-        <input  type='date' id='date'/>
-        <button type='click'>Add</button>
+        <input  type='date' min="2019-01-01" max="2024-12-31" id='date'/>
+
+        <div className='new-expense'>
+        <button type='submit'>Add</button>
+        </div>
+
         </form>
+      
     </div>
   )
 }
 
-const  exTitle=document.getElementById('title');
-const exAmount=document.getElementById('amount');
-const exDate=document.getElementById('date');
-
-//add event listener
-
-exTitle.addEventListener('input', (event)=>
-{
-  console.log(`Title: ${event.target.value}`)
-})
-
-
-exAmount.addEventListener('input',(event)=>
-{
-    console.log(`Amount is: ${event.target.value}`)
-})
 
 export  default  ExpenseForm;
